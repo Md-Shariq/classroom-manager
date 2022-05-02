@@ -1,0 +1,24 @@
+
+.teacher{
+    color: red;
+    font-weight: 500;
+   
+}
+.access-control-btn {
+  
+    color: red;
+    border-bottom: 3px solid red;
+}
+.hiddenRow {
+    padding: 0px !important;
+    border-bottom: 0px;
+}
+.side-line {
+    border-right: 2px solid gray !important;
+    height: 100%;
+}
+.aspect-heading{
+   
+    display: flex;
+    justify-content: start;
+}

@@ -1,0 +1,29 @@
+.addRole-btn{
+    padding: 5px 25px 5px 25px
+}
+.department-table{
+    border: 1px solid lightgray;
+}
+.table-nav{
+    background-color: #F2F2F2;
+    border-bottom: 2px solid lightgray;
+}
+.table-btn {
+    font-size: 14px;
+    padding: 1px 0px;
+    color: #27AE60;
+    background: rgba(39, 174, 96, 0.3); 
+    border: 1px solid #27AE60;
+    width: 150px;
+}
+.restricted-btn{
+    font-size: 14px;
+    padding: 1px 0px;
+    color: #FF0808;
+    background: rgba(255, 8, 8, 0.3);
+    border: 1px solid #FF0808;
+    width: 150px;
+}
+td,th{
+    text-align: center;
+}

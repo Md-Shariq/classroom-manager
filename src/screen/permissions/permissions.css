@@ -1,0 +1,23 @@
+.line{
+    width: 2px;
+    height: 19px;
+    background-color: #CFD3DA;
+    margin-bottom: 7px;
+}
+
+.active-tab-permission {
+    color: red;
+    text-decoration: none;
+    padding: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-bottom: 3px solid red;
+}
+.inactive-tab-permission{
+    color: gray;
+    text-decoration: none;
+    padding: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+   
+}

@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+
+import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
+import ApprovalMatrixTab from './screen/approvalMatrixTab/approvalMatrixTab';
+import Classrooms from './screen/classrooms/classrooms';
+import Department from './screen/department/department';
+import DepartmentDetail from './screen/departmentDetail/departmentDetail';
+import Home from './screen/home/home';
+import Permissions from './screen/permissions/permissions';
+import PermissionTab from './screen/permissionsTab/permissionsTab';
+import Project from './screen/projects/project';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />}>
+          <Route path="/" element={<Navigate replace to ="/permissions" />}/>
+          <Route path="/permissions" element={<Permissions />}>
+            <Route path="/permissions" element={<Navigate replace to ="/permissions/permissionTab" />} />
+            <Route path="/permissions/permissionTab" element={<PermissionTab />}>
+            <Route path="/permissions/permissionTab" element={<Navigate replace to ="/permissions/permissionTab/department" />} />
+                <Route path="/permissions/permissionTab/department" element={<Department />}/>
+                <Route path="/permissions/permissionTab/department-detail" element={<DepartmentDetail />}/>
+            </Route>
+            <Route path="/permissions/approvalMatrixTab" element={<ApprovalMatrixTab />} />
+          </Route>
+          <Route path="/project" element={<Project />} />
+          <Route path="/classrooms" element={<Classrooms />} />
+        </Route>
+
+
+      </Routes>
+    </>
   );
 }
 
